@@ -20,13 +20,13 @@
 
 ### Before Writing Code
 
-1. **Explore** - Find 3+ similar implementations in the codebase
+1. **Explore** - Find similar implementations in the codebase
 2. **Understand** - Identify patterns, conventions, and utilities already in use
 3. **Plan** - Break complex work into small, testable increments
 
 ### Implementation Cycle
 
-1. **Test** - Write failing test first (when practical)
+1. **Test** - Write failing test first for production code; skip for exploratory/scripting work
 2. **Implement** - Minimal code to pass
 3. **Refactor** - Clean up while tests pass
 4. **Commit** - Small, working increments with clear messages
@@ -42,6 +42,15 @@
    - Can this be split smaller?
    - Is there a simpler approach?
 4. Ask for help or try a completely different angle
+
+## Communication Style
+
+- Be concise — no filler words or sentences
+- Lead with the answer or action, not the reasoning
+- Don't explain what you just did unless asked
+- Don't restate the question or task before answering
+- Don't ask for confirmation on routine edits
+- Skip preamble, transitions, and summaries
 
 ## Code Standards
 
@@ -63,7 +72,14 @@
 **Before committing:**
 - Run formatter and linter
 - Self-review the diff
-- Write a message explaining "why", not just "what"
+
+### Commit Messages
+
+- Follow [Conventional Commits](https://conventionalcommits.org/) unless project specifies otherwise
+- Format: `<type>[optional scope]: <description>`
+- Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`
+- Write the "why", not just the "what"
+- Use imperative mood (`add`, not `added`)
 
 ### Error Handling
 
@@ -89,16 +105,6 @@ When choosing between approaches, prioritize:
 - Descriptive test names (given/when/then)
 - Deterministic - no flaky tests
 - Use existing test utilities
-
-## Quality Checklist
-
-Before considering work complete:
-
-- [ ] Tests written and passing
-- [ ] Follows project conventions
-- [ ] No linter/formatter warnings
-- [ ] Clear commit messages
-- [ ] No TODOs without tracking (issue/ticket)
 
 ## Rules
 
